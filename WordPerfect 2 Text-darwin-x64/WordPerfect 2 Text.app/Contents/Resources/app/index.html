@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WordPerfect to text</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+  </head>
+  <body class="bg-dark text-light">
+  	<div style="margin: 50px auto; text-align: center;">
+	    <h1>WordPerfect to Text</h1>
+	    <p>Select a WordPerfect file to convert to text.</p>
+	    <button id="open" class="btn btn-outline-light" onClick="openFile()">Select WordPerfect File</button>
+    </div>
+    <script>
+		const { dialog } = require('electron').remote;
+		const { exec } = require('child_process');
+		const fs = require('fs');
+
+		function openFile(){
+			dialog.showOpenDialog({
+				filters: [
+					{name: 'WordPerfect Document', extensions: ['wpd'] }
+			    ]
+			}, function (selectedFile) {
+				let selFile = selectedFile.toString().replace(/ /g, '\\ ');
+				let dirString = __dirname.replace(/ /g, '\\ ');
+
+				exec(dirString + "/bin/macos/wpd2text " + selFile, (err, stdout, stderr) => {
+					 if (err) {
+						console.log(err);
+						// node couldn't execute the command
+						return;
+					 }
+
+					var extensionList = selFile.split(".");
+					var extension = extensionList[extensionList.length - 1];
+					var file_no_ext = selFile.substring(0, (selFile.length - 1) - extension.length);
+
+					dialog.showSaveDialog({
+						defaultPath: file_no_ext + ".txt"
+					}, function(saveFile){
+						fs.writeFile(saveFile, stdout, function(err) {
+							if(err) {
+								return console.log(err);
+							}
+
+							// open(saveFile, "TextEdit");
+							exec("open -t " + saveFile);
+							alert("The file was saved successfully!");
+						}); 
+					});
+				});
+			}); 
+		}
+
+		// setTimeout(openFile, 500);
+    </script>
+  </body>
+</html>

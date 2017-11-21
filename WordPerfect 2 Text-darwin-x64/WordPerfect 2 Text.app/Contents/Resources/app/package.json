@@ -1,0 +1,27 @@
+{
+  "name": "wpd2txt-electron",
+  "productName": "WordPerfect 2 Text",
+  "version": "1.0.0",
+  "description": "Simple Electron app to convert WordPerfect documents to txt files.",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-packager . --platform=darwin --icon=./icon.icns",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "WordPerfect",
+    "libwpd",
+    "wpd2text",
+    "convert"
+  ],
+  "author": "Skylar Ostler",
+  "license": "MIT",
+  "dependencies": {
+    "mz": "^2.7.0"
+  },
+  "devDependencies": {
+    "electron": "^1.7.9",
+    "electron-packager": "^10.0.0"
+  }
+}

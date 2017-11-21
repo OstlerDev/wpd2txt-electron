@@ -1,0 +1,39 @@
+
+
+Using WordPerfect documentation
+
+WordPerfect includes online and paper documentation to help you learn and use the application efficiently. The main form of assistance is the online Help.
+
+Before you start using WordPerfect, it is important to understand the conventions used in the documentation. By reviewing the conventions, you will be able to use the mouse and the keyboard to create and edit documents more effectively.
+
+WordPerfect provides many ways to find information in the online Help. You can view information as you work in WordPerfect, or you can print online Help topics.
+
+In addition, context-sensitive Help is accessible from anywhere in WordPerfect. You can access context-sensitive Help from the menus, dialog boxes, property bars, and all other toolbars.You can also access the Showcase WordPerfect page, which illustrates many tasks you can do.
+
+WordPerfect comes with its own built-in expert, which is ready to help you with many tasks. PerfectExpert includes the best features of QuickTasks, templates, and Coaches, combined with information from online Help and the power of a natural-language interface, to assist you with everyday tasks. PerfectExpert allows you to create complex documents quickly, using professionally designed templates.
+
+PerfectExpert can guide you through a detailed project, such as creating a résumé (even if you want to use other suite applications to create parts of the document), or it can guide you through a smaller task, such as inserting a clipart image.
+
+PerfectExpert even provides you with templates of professionally designed documents to choose from, and you can change the layout and content in any number of ways to match your needs. More galleries of templates are available at the Corel Web site.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Application and system information
+
+WordPerfect provides easy access to information about the application, license information, and your system.
+
+Application information consists of the application name, version number, serial number, and user name. This information doesn't change. You'll find it particularly useful if you ever need help from Corel Technical Support Services.
+
+System information consists of details about any of the following categories: system, display, printing, Corel .exe and .dll files, and system .dll files. For example, you can see how much memory is available on the drive to which you want to save a file. You can save any system information in a text file called sysinfo.txt.
+
+
